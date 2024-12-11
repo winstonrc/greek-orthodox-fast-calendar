@@ -1,6 +1,6 @@
 # Greek Orthodox Fast Calendar
 
-This tools extracts the calendar events for fasting from the Greek Orthodox Archdiocese of America's [calendar](https://www.goarch.org/chapel/calendar).
+This tools extracts the calendar events for fasting from the Greek Orthodox Archdiocese of America's [calendar](https://www.goarch.org/chapel/calendar) and creates a new calendar ICS file with only those events.
 
 ## Usage
 
