@@ -13,6 +13,12 @@ Run the tool with:
 python main.py <arg>
 ```
 
+or:
+
+```bash
+uv run main.py <arg>
+```
+
 A calendar ICS file must be provided using one of the two args below.
 
 ### Args
