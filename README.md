@@ -7,21 +7,35 @@ This tools extracts the calendar events for fasting from the Greek Orthodox Arch
 You can retrieve the calendar ICS file from: https://www.goarch.org/chapel/planner.
 This tool is only designed to work with the English ICS file.
 
-Run the tool with:
+You can run the program using either `uv` or `pip`.
 
-```bash
-python main.py <arg>
-```
+### `uv`
 
-or:
+Run the program:
 
 ```bash
 uv run main.py <arg>
 ```
 
-A calendar ICS file must be provided using one of the two args below.
+### `pip`
+
+Setup the program:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run the program:
+
+```bash
+python main.py <arg>
+```
 
 ### Args
+
+A calendar ICS file must be provided using one of the two args below.
 
 - `--url`: The URL for the ICS file to retrieve and then process.
 
