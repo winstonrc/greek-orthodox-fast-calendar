@@ -80,7 +80,7 @@ def process_calendar(calendar_file_path: str):
                         fast_type_emoji = ""
                         match fast_type:
                             case "Strict Fast":
-                                fast_type_emoji = "☦️"
+                                fast_type_emoji = "🚫"
                             case "Fast Day (Wine and Oil Allowed)":
                                 fast_type_emoji = "🍇"
                             case "Fast Day (Fish Allowed)":
