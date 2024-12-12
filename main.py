@@ -51,7 +51,7 @@ def download_calendar(url: str) -> str | None:
 
 def process_calendar(calendar_file_path: str):
     fast_types = {
-        "Strict Fast": "Strict Fast: Refrain from meat, fish, oil, wine, dairy, and eggs.",
+        "Strict Fast": "Refrain from meat, fish, oil, wine, dairy, and eggs.",
         "Fast Day (Wine and Oil Allowed)": "Wine and oil are allowed.\nRefrain from meat, fish, dairy, and eggs.",
         "Fast Day (Fish Allowed)": "Refrain from meat, dairy and eggs.",
         "Fast Day (Dairy, Eggs, and Fish Allowed)": "Dairy, eggs, fish, oil and wine are allowed.\nRefrain from meat."
