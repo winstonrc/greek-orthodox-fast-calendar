@@ -1,9 +1,0 @@
-Metadata-Version: 2.1
-Name: greek-orthodox-fast-calendar
-Version: 0.1.0
-Summary: Extracts the fasting events from the Greek Orthdox Planner calendar, and creates a new calendar of only those events
-Requires-Python: >=3.12
-Description-Content-Type: text/markdown
-Requires-Dist: datetime>=5.5
-Requires-Dist: ics>=0.7.2
-Requires-Dist: requests>=2.32.3
