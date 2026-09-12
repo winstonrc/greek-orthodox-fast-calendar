@@ -39,7 +39,10 @@ def download_calendar(url: str) -> str | None:
 
             with open(calendar_file_path, 'wb') as file:
                 file.write(response.content)
-                print(f"File downloaded from provided URL & saved to: {calendar_file_path}")
+                print(
+                    "File downloaded from provided URL & saved to: "
+                    f"{calendar_file_path}"
+                )
         except requests.exceptions.RequestException as e:
             print(f"Failed to download file at the provided URL: {e}")
             return None
@@ -52,9 +55,14 @@ def download_calendar(url: str) -> str | None:
 def process_calendar(calendar_file_path: str):
     fast_types = {
         "Strict Fast": "Refrain from meat, fish, oil, wine, dairy, and eggs.",
-        "Fast Day (Wine and Oil Allowed)": "Wine and oil are allowed.\nRefrain from meat, fish, dairy, and eggs.",
+        "Fast Day (Wine and Oil Allowed)": (
+            "Wine and oil are allowed.\n"
+            "Refrain from meat, fish, dairy, and eggs."
+        ),
         "Fast Day (Fish Allowed)": "Refrain from meat, dairy and eggs.",
-        "Fast Day (Dairy, Eggs, and Fish Allowed)": "Dairy, eggs, fish, oil and wine are allowed.\nRefrain from meat."
+        "Fast Day (Dairy, Eggs, and Fish Allowed)": (
+            "Dairy, eggs, fish, oil and wine are allowed.\nRefrain from meat."
+        ),
     }
 
     output_file_name = "greek-orthodox-fast"
@@ -95,16 +103,7 @@ def process_calendar(calendar_file_path: str):
     print(f"{len(c.events)} events extracted.")
     # Save the new calendar
     with open(output_file_path, 'w') as file:
-        # Write headers
-        file.write("BEGIN:VCALENDAR\n")
-        file.write("VERSION:2.0\n")
-
-        for event in c.timeline:
-            file.write(event.serialize())
-            file.write("\n")
-
-        # Write footer
-        file.write("END:VCALENDAR\n")
+        file.write(c.serialize())
         print(f"New calendar saved to: {output_file_path}")
 
 
@@ -125,4 +124,3 @@ if __name__ == "__main__":
     else:
         print("Error: Improper calendar_file_path.")
         sys.exit()
-

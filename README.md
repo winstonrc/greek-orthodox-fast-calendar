@@ -17,34 +17,11 @@ A calendar ICS file must be provided using one of the two args below.
 
 ### Setup
 
-You can run the program using either `uv` or `pip`.
-
-#### uv
+This project uses [uv](https://docs.astral.sh/uv/) to manage and lock its
+dependencies.
 
 Run the program:
 
 ```bash
 uv run main.py <arg>
 ```
-
-#### pip
-
-First, create a virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Next, activate the virtual environment, and install the dependencies:
-
-```bash
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-Finally, run the program:
-
-```bash
-python main.py <arg>
-```
-
